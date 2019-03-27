@@ -23,7 +23,7 @@ function Speaker({ Image, name, talk, twitter }) {
         backgroundColor: "#fff",
         borderRadius: 12,
         display: "flex",
-        alignItems: "center"
+        alignItems: "center",
       }}
     >
       <Modal
