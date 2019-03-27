@@ -27,15 +27,15 @@ const Root = () => (
       <MainBanner>
         <Flex flexDirection="row" alignItems="center">
           <ButtonLink
-            href="https://www.papercall.io/magnoliajs"
+            href="https://ti.to/magnoliajs/magnoliajs-2019"
             alignSelf="flex-start"
             mr={40}
             target="_blank"
           >
-            Submit a talk
+            Get your ticket!
           </ButtonLink>
-          <GatsbyLink to="speak" color="white">
-            Learn more
+          <GatsbyLink to="speakers" color="white">
+            See speakers
           </GatsbyLink>
         </Flex>
       </MainBanner>
