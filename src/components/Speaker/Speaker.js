@@ -1,9 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Flex } from "@rebass/grid";
+import Modal from "react-modal";
+import SpeakerModal from "./SpeakerModal";
 
-export default function Speaker({ Image, name, talk }) {
+const truncate = content =>
+  content
+    .split(" ")
+    .slice(0, 25)
+    .join(" ") + "...";
+
+function Speaker({ Image, name, talk, twitter }) {
+  const [isOpen, setOpen] = useState(false);
+
   return (
     <div
+      onClick={x => setOpen(true)}
       style={{
         width: 480,
         minWidth: 300,
@@ -15,18 +26,39 @@ export default function Speaker({ Image, name, talk }) {
         alignItems: "center"
       }}
     >
+      <Modal
+        isOpen={isOpen}
+        style={{
+          overlay: {
+            background: "rgba(51, 51, 51, 0.71)",
+            overflow: "scroll"
+          },
+          content: {
+            background: "none",
+            border: "none",
+            margin: 0,
+            padding: 0,
+            overflow: "visible"
+          }
+        }}
+        ariaHideApp={false}
+      >
+        <SpeakerModal
+          name={name}
+          talk={talk}
+          setOpen={setOpen}
+          twitter={twitter}
+          Image={Image}
+        />
+      </Modal>
+
       <Flex
         flexDirection="row"
         alignItems="center"
         justifyContent="center"
         style={{ padding: "0.5rem", flexWrap: "wrap" }}
       >
-        <div
-          style={{
-            margin: "0.5rem",
-            flex: 2
-          }}
-        >
+        <div style={{ margin: "0.5rem", flex: 2 }}>
           <div style={{ width: "100%" }}>
             <div
               style={{
@@ -41,14 +73,30 @@ export default function Speaker({ Image, name, talk }) {
             </div>
 
             <h3 style={{ textAlign: "center" }}>{name}</h3>
+            <a
+              href={`https://twitter.com/${twitter}`}
+              title={`Go to ${name}'s Twitter`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Twitter
+            </a>
           </div>
         </div>
 
         <div style={{ width: "250px", margin: "0.5rem" }}>
           <h3 style={{ fontSize: "1rem" }}>{talk.title}</h3>
-          <p style={{ fontSize: "1rem" }}>{talk.description}</p>
+          <p
+            style={{
+              fontSize: "1rem",
+              height: "200px"
+            }}
+          >
+            {truncate(talk.description)}
+          </p>
         </div>
       </Flex>
     </div>
   );
 }
+export default Speaker;
