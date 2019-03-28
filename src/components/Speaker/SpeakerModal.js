@@ -37,9 +37,8 @@ const SpeakerModal = ({ name, talk, setOpen, twitter, Image, company }) => (
           Twitter
         </a>
       </Flex>
-      {company === "" ? null : (
-        <h3 style={{ fontSize: "1rem" }}>Company: {company}</h3>
-      )}
+
+      <h4 style={{ fontSize: ".9rem" }}>Company: {company}</h4>
       <h3 style={{ fontSize: "1rem" }}>{talk.title}</h3>
       <p style={{ fontSize: "1rem" }}>{talk.description}</p>
       <Flex

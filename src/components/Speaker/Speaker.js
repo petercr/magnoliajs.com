@@ -88,9 +88,7 @@ function Speaker({ Image, name, talk, twitter, company }) {
 
         <div style={{ width: "250px", margin: "0.5rem" }}>
           <h3 style={{ fontSize: "1rem" }}>{talk.title}</h3>
-          {company === null ? null : (
-            <h3 style={{ fontSize: "1rem" }}>Company: {company}</h3>
-          )}
+          <h4 style={{ fontSize: ".9rem" }}>Company: {company}</h4>
 
           <p
             style={{
