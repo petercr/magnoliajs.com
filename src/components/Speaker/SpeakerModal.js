@@ -2,7 +2,7 @@ import React from "react";
 import { Flex } from "@rebass/grid";
 import { Box, Card, Button } from "rebass";
 
-const SpeakerModal = ({ name, talk, setOpen, twitter, Image }) => (
+const SpeakerModal = ({ name, talk, setOpen, twitter, Image, company }) => (
   <Box m="auto" width={600}>
     <Card
       borderRadius={12}
@@ -37,6 +37,9 @@ const SpeakerModal = ({ name, talk, setOpen, twitter, Image }) => (
           Twitter
         </a>
       </Flex>
+      {company === "" ? null : (
+        <h3 style={{ fontSize: "1rem" }}>Company: {company}</h3>
+      )}
       <h3 style={{ fontSize: "1rem" }}>{talk.title}</h3>
       <p style={{ fontSize: "1rem" }}>{talk.description}</p>
       <Flex
@@ -46,6 +49,7 @@ const SpeakerModal = ({ name, talk, setOpen, twitter, Image }) => (
         style={{ padding: "0.5rem", flexWrap: "wrap" }}
       >
         <Button
+          style={{ background: "#BF5272" }}
           onClick={e => {
             e.stopPropagation();
             setOpen(false);

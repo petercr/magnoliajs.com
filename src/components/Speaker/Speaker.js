@@ -9,7 +9,7 @@ const truncate = content =>
     .slice(0, 25)
     .join(" ") + "...";
 
-function Speaker({ Image, name, talk, twitter }) {
+function Speaker({ Image, name, talk, twitter, company }) {
   const [isOpen, setOpen] = useState(false);
 
   return (
@@ -23,7 +23,8 @@ function Speaker({ Image, name, talk, twitter }) {
         backgroundColor: "#fff",
         borderRadius: 12,
         display: "flex",
-        alignItems: "center"
+        alignItems: "center",
+        boxShadow: "6px 9px 3px rgba(0 ,0,0,0.4)"
       }}
     >
       <Modal
@@ -49,6 +50,7 @@ function Speaker({ Image, name, talk, twitter }) {
           setOpen={setOpen}
           twitter={twitter}
           Image={Image}
+          company={company}
         />
       </Modal>
 
@@ -86,6 +88,10 @@ function Speaker({ Image, name, talk, twitter }) {
 
         <div style={{ width: "250px", margin: "0.5rem" }}>
           <h3 style={{ fontSize: "1rem" }}>{talk.title}</h3>
+          {company === null ? null : (
+            <h3 style={{ fontSize: "1rem" }}>Company: {company}</h3>
+          )}
+
           <p
             style={{
               fontSize: "1rem",
