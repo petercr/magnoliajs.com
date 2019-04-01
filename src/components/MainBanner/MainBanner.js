@@ -23,14 +23,7 @@ function MainBanner({ children }) {
         justifyContent={["flex-start", "center"]}
         px={30}
       >
-        <Flex justifyContent="center" flexDirection="column">
-          <Heading size={1} color="light" my={0} fontSize={6}>
-            MagnoliaJS Conference
-          </Heading>
-          <Text color="highlight" my={30}>
-            Jackson, Mississippi | April 17 - April 18
-          </Text>
-
+ 
           <Flex justifyContent="center" flexDirection="column">
             <Text color="white" my={30}>
               Early Bird tickets on sale now!
@@ -46,14 +39,7 @@ function MainBanner({ children }) {
               </a>
             </Text>
           </Flex>
-
-          {children}
-        </Flex>
-      </Box>
-      <Box width={[1, 1 / 2]}>
-        <Image src={bannerImg} alt="" />
-      </Box>
-    </Flex>
+        
   );
 }
 

@@ -27,15 +27,15 @@ const Root = () => (
       <MainBanner>
         <Flex flexDirection="row" alignItems="center">
           <ButtonLink
-            href="https://www.papercall.io/magnoliajs"
+            href="https://ti.to/magnoliajs/magnoliajs-2019"
             alignSelf="flex-start"
             mr={40}
             target="_blank"
           >
-            Submit a talk
+            Get your ticket!
           </ButtonLink>
-          <GatsbyLink to="speak" color="white">
-            Learn more
+          <GatsbyLink to="speakers" color="white">
+            See speakers
           </GatsbyLink>
         </Flex>
       </MainBanner>
@@ -55,7 +55,8 @@ const Root = () => (
             Image={LaurieVossImage}
             talk={{
               title: "JavaScript: who, what, where, why and next",
-              description: "npm has more data than anyone about who JavaScript developers are and what we’re up to. Using our unparalleled access to registry usage stats and the results of our 2019 ecosystem survey of over 33,000 developers, I break down the current state of JavaScript and where trends look like they’re headed, so you can make more informed technical choices."
+              description:
+                "npm has more data than anyone about who JavaScript developers are and what we’re up to. Using our unparalleled access to registry usage stats and the results of our 2019 ecosystem survey of over 33,000 developers, I break down the current state of JavaScript and where trends look like they’re headed, so you can make more informed technical choices."
             }}
             twitter="seldo"
           />
@@ -64,7 +65,8 @@ const Root = () => (
             Image={KenWheelerImage}
             talk={{
               title: "Renderless Components with Hooks",
-              description: "This talk will explore using a renderless component pattern with React hooks to provide declarative interfaces to imperative and non-DOM based libraries/APIs."
+              description:
+                "This talk will explore using a renderless component pattern with React hooks to provide declarative interfaces to imperative and non-DOM based libraries/APIs."
             }}
             twitter="ken_wheeler"
           />
@@ -72,8 +74,9 @@ const Root = () => (
             name="Jay Phelps"
             Image={JayPhelpsImage}
             talk={{
-              title: "Whitty talk title",
-              description: "Followed up with a killer talk description. that is very long, much longer than the rest, to show what a long one will look like. you know, in case one is really long or something. I don't know, whatever dude."
+              title: "The WebAssembly Revolution Has Begun",
+              description:
+                "WebAssembly (aka wasm) is a new, standardized compilation target for the web, shipping in all modern browsers. But since it's so low level it can be difficult to see how it will revolutionize the next generation of web apps–and definitely not just games and C++. This is a game changer for all web developers. In this talk Jay will reveal what it is, how you can use it today, and the incredible opportunities it will unlock in the years to come."
             }}
             twitter="_jayphelps"
           />
