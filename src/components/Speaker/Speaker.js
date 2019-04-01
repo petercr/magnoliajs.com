@@ -63,6 +63,6 @@ function Speaker({ Image, name, talk, twitter, company }) {
         </div>
       </Flex>
     </div>
-  );
+  
 }
 export default Speaker;
