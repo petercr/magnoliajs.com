@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Flex } from "@rebass/grid";
-=
 import { Button } from 'rebass'
 import Modal from "react-modal";
 import SpeakerModal from "./SpeakerModal";
