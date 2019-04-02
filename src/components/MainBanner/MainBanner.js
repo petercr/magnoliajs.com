@@ -21,6 +21,15 @@ function MainBanner({ children }) {
             Jackson, Mississippi | April 17 - April 18
           </Text>
 
+          <Flex justifyContent="center" flexDirection="column">
+            <Text color="white" my={30}>
+              Early Bird tickets on sale now!<br />
+              <a href="https://ti.to/magnoliajs/magnoliajs-2019" title="Click here to purchase tickets to MagnoliaJS" style={{ color: "yellow" }} target="_blank" rel="noopener noreferrer">
+                Purchase your ticket!
+              </a>
+            </Text>
+          </Flex>
+
           {children}
         </Flex>
       </Box>
