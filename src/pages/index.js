@@ -88,9 +88,14 @@ const Root = () => (
       </Alternate>
       <Alternate pb={100}>
         <Heading color="mainBackground" size={2}>
-          Schedule
+          Schedule - April 17 (Workshop Day)
         </Heading>
-        <Schedule />
+        <Text pt={10} pb={30}>Workshops run concurrently and their durations/end times will be determined by the instructors.</Text>
+        <Schedule day="workshop" />
+        <Heading color="alternateHeading" size={2}>
+          Schedule - April 18 (Conference Day)
+        </Heading>
+        <Schedule day="conference" />
       </Alternate>
       <Alternate pb={100}>
         <Heading color="alternateHeading" size={2}>

@@ -1,6 +1,52 @@
 import React from 'react';
 
-export default function Schedule() {
+export default function Schedule({ day }) {
+  if ( day === 'workshop' ) {
+    return (
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Event</th>
+            <th>Instructor</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><time>8:30am</time></td>
+            <td>Arrivals, set up</td>
+            <td></td>
+            <td>3rd Floor</td>
+          </tr>
+          <tr>
+            <td><time>9:00am</time></td>
+            <td>Get in the Fast Lane: Measuring Web Performance</td>
+            <td>Sia Karamalegos</td>
+            <td>3rd Floor - Room 214A</td>
+          </tr>
+          <tr>
+            <td><time>9:00am</time></td>
+            <td>Developing Applications with Kubernetes</td>
+            <td>JJ Ashgar</td>
+            <td>3rd Floor - Room 214B</td>
+          </tr>
+          <tr>
+            <td><time>9:00am</time></td>
+            <td>Practical CSS Grid: Get started with Grid with practical, reusable code</td>
+            <td>Bryan Robinson</td>
+            <td>3rd Floor - Room 212</td>
+          </tr>
+          <tr>
+            <td><time>9:00am</time></td>
+            <td>Zero Dependency Components: Introduction to Web Components</td>
+            <td>Nate Clark</td>
+            <td>3rd Floor - Room 213</td>
+          </tr>
+        </tbody>
+      </table>
+    )
+  }
   return (
     <table>
       <thead>
