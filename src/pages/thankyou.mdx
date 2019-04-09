@@ -1,37 +1,66 @@
 import { Link } from "gatsby";
 import Layout from "../components/layout";
 import Card from "../components/Card";
-import eggheadLogo from "../images/egghead.jpg";
+import { Flex, Box } from "@rebass/grid";
+import Sponsor from "../components/Sponsor";
+import Heading from "../components/Heading";
+import InfiniteRedLogo from "../images/infinite-red.png";
+import MississippiCodingAcademiesLogo from "../images/mississippi-coding-academies.png";
+import EggheadLogo from "../images/egghead.png";
+import CSpireLogo from "../images/c-spire.png";
+import BeanPathLogo from "../images/bean-path.png";
+import EchoBindLogo from "../images/echo-bind.png";
+import SmartzWebLogo from "../images/smartz-web.png";
+import ManningLogo from "../images/manning.png";
+import DevRelateLogo from "../images/devrelate.png";
+import MississippiInteractive from "../images/mississippi-interactive.png";
 
 <Card>
 
 # Sponsors
 
-## Gold Sponsors
+<Heading size={2} as={'h2'} style={{textAlign: 'center', marginBottom: '36px'}}>
+  Gold Sponsors
+</Heading>
 
-- Infinite Red
+<Flex justifyContent='center' flexWrap='wrap' alignItems='center' style={{marginBottom: '96px'}}>
+  <Sponsor image={InfiniteRedLogo} link={'https://infinite.red'}/>
+  <Sponsor image={MississippiCodingAcademiesLogo} link={'https://mscoding.org/'}/>
+  <Sponsor image={EggheadLogo} link={'https://egghead.io'}/>
+</Flex>
 
-- MS Coding Academies
 
-- Egghead
+<Heading size={2} as={'h2'} style={{textAlign: 'center', marginBottom: '36px'}}>
+  Coffee Cart Sponsor
+</Heading>
 
-## Scholarship Sponsors
+<Flex justifyContent='center' flexWrap='wrap' alignItems='center' style={{marginBottom: '96px'}}>
+  <Sponsor image={CSpireLogo} link={'https://www.cspire.com/'}/>
+</Flex>
 
-- The Bean Path
 
-- SchoolStatus
+<Heading size={2} as={'h2'} style={{textAlign: 'center', marginBottom: '36px'}}>
+  Scholarship Sponsors
+</Heading>
 
-## Community Sponsors
+<Flex justifyContent='center' flexWrap='wrap' alignItems='center' style={{marginBottom: '96px'}}>
+  <Sponsor image={BeanPathLogo} link={'https://www.thebeanpath.org/'}/>
+  {/* Need SchoolStatus Logo */}
+  {/* <Sponsor image={} link={''}/>  */}
+</Flex>
 
-- Echobind
 
-- DevRelate
+<Heading size={2} as={'h2'} style={{textAlign: 'center', marginBottom: '36px'}}>
+  Community Sponsors
+</Heading>
 
-- Manning
-
-- SmartzWeb
-
-- Mississippi Interactive
+<Flex justifyContent='center' flexWrap='wrap' alignItems='center' style={{marginBottom: '96px'}}>
+  <Sponsor image={EchoBindLogo} link={'https://echobind.com/'}/>
+  <Sponsor image={SmartzWebLogo} link={'https://www.smartzweb.com/'}/>
+  <Sponsor image={ManningLogo} link={'https://www.manning.com/'}/>
+  <Sponsor image={DevRelateLogo} link={'http://www.devrelate.io/'}/>
+  <Sponsor image={MississippiInteractive} link={'https://www.egov.com/'}/>
+</Flex>
 
 ## Very Special Thank-You's
 
