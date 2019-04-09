@@ -10,12 +10,12 @@ const truncate = content =>
     .slice(0, 25)
     .join(" ") + "...";
 
-function Speaker({ Image, name, talk, twitter, company }) {
+function Speaker({ Image, name, talk, twitter, company, bio }) {
   const [isOpen, setOpen] = useState(false);
 
   return <div onClick={x => setOpen(true)} style={{ width: 480, minWidth: 300, minHeight: 280, margin: "1rem", backgroundColor: "#fff", borderRadius: 12, display: "flex", alignItems: "center", boxShadow: "6px 9px 3px rgba(0 ,0,0,0.4)" }}>
       <Modal isOpen={isOpen} style={{ overlay: { background: "rgba(51, 51, 51, 0.71)", overflow: "scroll" }, content: { background: "none", border: "none", margin: 0, padding: 0, overflow: "visible" } }} ariaHideApp={false}>
-        <SpeakerModal name={name} talk={talk} setOpen={setOpen} twitter={twitter} Image={Image} company={company}/>
+        <SpeakerModal name={name} talk={talk} setOpen={setOpen} twitter={twitter} Image={Image} company={company} bio={bio}/>
       </Modal>
 
       <Flex flexDirection="row" alignItems="center" justifyContent="center" style={{ padding: "0.5rem", flexWrap: "wrap" }}>
@@ -26,6 +26,7 @@ function Speaker({ Image, name, talk, twitter, company }) {
                 borderRadius: "100%",
                 overflow: "hidden",
                 width: "125px",
+                height: "125px",
                 margin: "10px auto",
                 boxShadow: "0px 3px 15px rgba(0,0,0,0.2)"
               }}

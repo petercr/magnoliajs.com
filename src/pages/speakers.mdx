@@ -13,6 +13,12 @@ import GrantLabordeImage from "../components/Images/grant-laborde-image";
 import KurtKempleImage from "../components/Images/kurt-kemple-image";
 import BlakeWatsonImage from "../components/Images/blake-watson-image";
 import SiaKaramalegosImage from "../components/Images/sia-karamalegos-image";
+import MichaelLiendoImage from "../components/Images/michael-liendo-image";
+import TylerClarkImage from "../components/Images/tyler-clark-image";
+import JustinSamuelsImage from "../components/Images/justin-samuels-image";
+import KaylaSweenImage from "../components/Images/kayla-sween-image";
+import VinceFalconiImage from "../components/Images/vince-falconi-image";
+import PeterPiekarczykImage from "../components/Images/peterp-image";
 
 <Flex
   flexDirection="row"
@@ -119,5 +125,66 @@ import SiaKaramalegosImage from "../components/Images/sia-karamalegos-image";
     }}
     twitter="blakewatson"
     company="Mad Genius"
+  />
+  <Speaker
+    name="Tyler Clark"
+    Image={TylerClarkImage}
+    talk={{
+      title: "Master the JavaScript Interview",
+      description: "Inspired by Eric Elliot’s series, “Master the JavaScript Interview” I will be reviewing tips and tricks to help get you your next JS job. We’ll go over recursion, closures, inheritance, function composition, functional programming, async, big O notation, and popular algorithms!"
+    }}
+    twitter="iamtylerwclark"
+    company="Pluralsight"
+  />
+  <Speaker
+    name="Michael Liendo"
+    Image={MichaelLiendoImage}
+    talk={{
+      title: "Using JS to Bridge the Tech and Culture Gap",
+      description: "Working with JavaScript on the frontend and backend is nice, but not always the case. Often times, Java is used on the backend which could also mean working with cultural differences. Come see how JavaScript can be used to bridge not only the Java vs JavaScript gap, but also cultural differences as well, using Hindi culture as an example."
+    }}
+    twitter="mtliendo"
+    company="Aquent IT Solutions"
+    bio="My name is Michael Liendo. I’m a senior software engineer and Internal Instructor at Aquent IT Solutions in East Moline, IL. As a former professional model turned dad-bod enthusiast, I enjoy spending my time with my beautiful fiancee and 3 kids. Find my everywhere @mtliendo"
+  />
+  <Speaker
+    name="Kayla Sween"
+    Image={KaylaSweenImage}
+    talk={{
+      title: "How to Avoid SUX (Some User Experience)",
+      description: "Billy Gregory famously tweeted, “When UX doesn't consider ALL users, shouldn't it be known as \"SOME User Experience\" or... SUX? #a11y”. In this talk, I will address some common unintentionally exclusive web design and development practices and how to fix those problems to avoid being another website that SUX. I will also present some resources to help developers create more inclusive websites."
+    }}
+    twitter="kayladsween"
+    company="C Spire"
+  />
+  <Speaker
+    name="Justin Samuels"
+    Image={JustinSamuelsImage}
+    talk={{
+      title: "Dissecting the fluff from the buff of TDD, Twitter Driven Development",
+      description: "A influx of media sources in our digital age is providing a previously incomprehensible amount of data to distill verifiable and reputable sources from the cacophony. By becoming more judicious one can begin to orient their direction for improving their codebase through Twitter Driven Development."
+    }}
+    twitter="thugdebugger"
+    company="Babel Street"
+  />
+  <Speaker
+    name="Peter Piekarczyk"
+    Image={PeterPiekarczykImage}
+    talk={{
+      title: "Building The Next Generation of Mobile Apps using Draftbit",
+      description: "As developers, the last thing we want to do is push pixels. The cool stuff lies in the API, data, animations, component flow and architecture, so why do I still spend all this time pushing pixels? As a React Native veteran, former consultant, co-host of React Native Radio, I’ve struggled through it for years which is how we got the idea for Draftbit. Draftbit is a way to let your other team members deal with the pixel pushing and let you run free. Draftbit uses the same layout engine in the browser as it does on your device which means we can perfectly recreate any screen that you’ve built in the past. The software runs in the browser, is powered by ReasonML and GraphQL and has the coolest looking UI on the web right now. There’s a lot of cool stuff under the hood that I’m excited to share with you."
+    }}
+    twitter="peterpme"
+    company="DraftBit"
+  />
+  <Speaker
+    name="Vince Falconi"
+    Image={VinceFalconiImage}
+    talk={{
+      title: "So Many Hats: Security for Web Developers",
+      description: "When it comes to information security, we hear a lot about black hats and white hats, red teams and blue teams, but where do we web developers fit into things? What hats do we wear and what team meetings do we need to attend? Get some answers and some tools to level up your security game."
+    }}
+    twitter="vincefalconi"
+    company="BeyondTrust"
   />
 </Flex>;

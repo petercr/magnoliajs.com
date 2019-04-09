@@ -2,7 +2,7 @@ import React from "react";
 import { Flex } from "@rebass/grid";
 import { Box, Card, Button } from "rebass";
 
-const SpeakerModal = ({ name, talk, setOpen, twitter, Image, company }) => (
+const SpeakerModal = ({ name, talk, setOpen, twitter, Image, company, bio }) => (
 
   <Box m="auto" width={600}>
     <Card
@@ -43,6 +43,12 @@ const SpeakerModal = ({ name, talk, setOpen, twitter, Image, company }) => (
       <h4 style={{ fontSize: ".9rem" }}>Company: {company}</h4>
       <h3 style={{ fontSize: "1rem" }}>{talk.title}</h3>
       <p style={{ fontSize: "1rem" }}>{talk.description}</p>
+      {bio && 
+        <>
+          <h4 style={{ fontSize: ".9rem"}}>Bio</h4>
+          <p style={{ fontSize: "1rem" }}>{bio}</p>
+        </>
+      }
       <Flex
         flexDirection="row"
         alignItems="center"
