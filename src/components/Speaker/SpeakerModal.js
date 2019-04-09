@@ -3,11 +3,10 @@ import { Flex } from "@rebass/grid";
 import { Box, Card, Button } from "rebass";
 
 const SpeakerModal = ({ name, talk, setOpen, twitter, Image, company }) => (
-
-  <Box m="auto" width={600}>
+  <Box m="auto" width={[1, 0.9, 0.8]}>
     <Card
       borderRadius={12}
-      p={5}
+      p={[2, 4, 6]}
       bg="white"
       boxShadow="0 0 16px rgba(0, 0, 0, .25)"
     >
@@ -38,7 +37,6 @@ const SpeakerModal = ({ name, talk, setOpen, twitter, Image, company }) => (
           Twitter
         </a>
       </Flex>
-
 
       <h4 style={{ fontSize: ".9rem" }}>Company: {company}</h4>
       <h3 style={{ fontSize: "1rem" }}>{talk.title}</h3>
