@@ -50,18 +50,25 @@ const Layout = ({ children, hideHeading = false }) => (
                   <Link to="speakers">🗣️ Speakers</Link>
                 </NavItem>
                 <NavItem>
+                  <Link to="workshops">🛠️ Workshops</Link>
+                </NavItem>
+                <NavItem>
                   <Link to="thankyou">❤️ Sponsors & Thank You's</Link>
                 </NavItem>
                 <NavItem>
                   <Link to="vision">👀 Vision</Link>
                 </NavItem>
-                <NavItem>
-                  <Link to="codeofconduct">📝 Code of Conduct</Link>
-                </NavItem>
               </Nav>
             </Header>
             <Main>{children}</Main>
-            <Footer>&copy; 2019 Magnolia Events LLC</Footer>
+            <Footer>
+            <Nav>
+              <NavItem>
+                <Link to="codeofconduct">📝 Code of Conduct</Link>
+              </NavItem>
+            </Nav>
+              &copy; 2019 Magnolia Events LLC
+            </Footer>
           </>
         </ThemeProvider>
       </>
