@@ -60,6 +60,7 @@ const Root = () => (
                 "npm has more data than anyone about who JavaScript developers are and what we’re up to. Using our unparalleled access to registry usage stats and the results of our 2019 ecosystem survey of over 33,000 developers, I break down the current state of JavaScript and where trends look like they’re headed, so you can make more informed technical choices."
             }}
             twitter="seldo"
+            company="npm"
           />
           <Speaker
             name="Ken Wheeler"
@@ -70,6 +71,7 @@ const Root = () => (
                 "This talk will explore using a renderless component pattern with React hooks to provide declarative interfaces to imperative and non-DOM based libraries/APIs."
             }}
             twitter="ken_wheeler"
+            company="******"
           />
           <Speaker
             name="Jay Phelps"
@@ -80,6 +82,7 @@ const Root = () => (
                 "WebAssembly (aka wasm) is a new, standardized compilation target for the web, shipping in all modern browsers. But since it's so low level it can be difficult to see how it will revolutionize the next generation of web apps–and definitely not just games and C++. This is a game changer for all web developers. In this talk Jay will reveal what it is, how you can use it today, and the incredible opportunities it will unlock in the years to come."
             }}
             twitter="_jayphelps"
+            company=""
           />
         </Flex>
         <Text pt={10} pb={30} textAlign="center">
