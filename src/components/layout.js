@@ -53,10 +53,10 @@ const Layout = ({ children, hideHeading = false }) => (
                   <Link to="workshops">🛠️ Workshops</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="schedule">📆 Schedule</Link>
+                  <Link to="info">💡 Helpful Info</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="info">💡 Helpful Info</Link>
+                  <Link to="thankyou">❤️ Sponsors & Thank You's</Link>
                 </NavItem>
               </Nav>
             </Header>
@@ -68,9 +68,6 @@ const Layout = ({ children, hideHeading = false }) => (
               </NavItem>
               <NavItem>
                 <Link to="codeofconduct">📝 Code of Conduct</Link>
-              </NavItem>
-              <NavItem>
-                <Link to="thankyou">❤️ Sponsors & Thank You's</Link>
               </NavItem>
             </Nav>
               &copy; 2019 Magnolia Events LLC
