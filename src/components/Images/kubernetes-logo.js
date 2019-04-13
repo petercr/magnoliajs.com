@@ -19,14 +19,14 @@ const Image = () => (
       query {
         placeholderImage: file(relativePath: { eq: "kubernetes-logo.png" }) {
           childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            fixed(width: 125, height: 125) {
+              ...GatsbyImageSharpFixed_withWebp_tracedSVG
             }
           }
         }
       }
     `}
-    render={data => <Img fluid={data.placeholderImage.childImageSharp.fluid} />}
+    render={data => <Img fixed={data.placeholderImage.childImageSharp.fixed} />}
   />
 );
 export default Image;
