@@ -1,6 +1,8 @@
 import { graphql } from "gatsby";
 import Layout from "../../components/layout";
 import { Flex } from "@rebass/grid";
+import WorkshopHeader from "../../components/Workshops/WorkshopHeader.js";
+import KubernetesLogo from "../../components/Images/kubernetes-logo.js";
 
 <Flex
   flexDirection="row"
@@ -10,7 +12,10 @@ import { Flex } from "@rebass/grid";
   style={{ padding: "2rem", width: "", color: "#000000", backgroundColor: "#D1D9E4" }}
 >
 
-# Developing Applications with Kubernetes ☸
+<WorkshopHeader
+  heading="Developing Applications with Kubernetes"
+  Image={KubernetesLogo}
+/>
 
 Microservices revolutionized the way we look at app development and is now one of the most popular programming architectures. Now, Docker alongside Kubernetes is changing the way teams look at deployments of these microservices. Kubernetes provides powerful production-grade orchestration for your "Dockerized" microservices.
 
