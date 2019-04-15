@@ -15,7 +15,8 @@ import SmartzWebLogo from "../images/smartz-web.png";
 import ManningLogo from "../images/manning.png";
 import DevRelateLogo from "../images/devrelate.png";
 import MississippiInteractive from "../images/mississippi-interactive.png";
-import schoolStatusLogo from "../images/schoolstatus-logo.png";
+import SchoolStatusLogo from "../images/schoolstatus-logo.png";
+import ActivateLogo from "../images/activate-logo.png";
 
 <Card>
 
@@ -82,6 +83,23 @@ import schoolStatusLogo from "../images/schoolstatus-logo.png";
   as={"h2"}
   style={{ textAlign: "center", marginBottom: "36px" }}
 >
+  Silver Sponsors
+</Heading>
+
+<Flex
+  justifyContent="center"
+  flexWrap="wrap"
+  alignItems="center"
+  style={{ marginBottom: "96px" }}
+>
+  <Sponsor image={ActivateLogo} link={"http://www.activateconf.com/"} />
+</Flex>
+
+<Heading
+  size={2}
+  as={"h2"}
+  style={{ textAlign: "center", marginBottom: "36px" }}
+>
   Scholarship Sponsors
 </Heading>
 
@@ -92,7 +110,7 @@ import schoolStatusLogo from "../images/schoolstatus-logo.png";
   style={{ marginBottom: "96px" }}
 >
   <Sponsor image={BeanPathLogo} link={"https://www.thebeanpath.org/"} />
-  <Sponsor image={schoolStatusLogo} link={"https://schoolstatus.com"} />
+  <Sponsor image={SchoolStatusLogo} link={"https://schoolstatus.com"} />
 </Flex>
 
 <Heading
