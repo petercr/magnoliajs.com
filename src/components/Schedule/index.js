@@ -27,18 +27,6 @@ export default function Schedule({ day }) {
           </tr>
           <tr>
             <td><time>9:00am</time></td>
-            <td>Developing Applications with Kubernetes</td>
-            <td>JJ Ashgar</td>
-            <td>3rd Floor - Room 214B</td>
-          </tr>
-          <tr>
-            <td><time>9:00am</time></td>
-            <td>Practical CSS Grid: Get started with Grid with practical, reusable code</td>
-            <td>Bryan Robinson</td>
-            <td>3rd Floor - Room 212</td>
-          </tr>
-          <tr>
-            <td><time>9:00am</time></td>
             <td>Zero Dependency Components: Introduction to Web Components</td>
             <td>Nate Clark</td>
             <td>3rd Floor - Room 213</td>
