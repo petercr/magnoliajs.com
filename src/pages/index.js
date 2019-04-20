@@ -27,14 +27,6 @@ const Root = () => (
     <Layout>
       <MainBanner>
         <Flex flexDirection="row" alignItems="center">
-          <ButtonLink
-            href="https://ti.to/magnoliajs/magnoliajs-2019"
-            alignSelf="flex-start"
-            mr={40}
-            target="_blank"
-          >
-            Get your ticket!
-          </ButtonLink>
           <GatsbyLink to="speakers" color="white">
             See speakers
           </GatsbyLink>
