@@ -119,12 +119,6 @@ export default function Schedule({ day }) {
           <td>Lunch Stage - Rooms 301-304</td>
         </tr>
         <tr>
-          <td><time>1:00pm</time></td>
-          <td>Code Everyday: A Self-Taught Developer's Journey</td>
-          <td>Tae'lur Myers</td>
-          <td>Lunch Stage - Rooms 301-304</td>
-        </tr>
-        <tr>
           <td><time>1:30pm</time></td>
           <td>Break</td>
           <td></td>
