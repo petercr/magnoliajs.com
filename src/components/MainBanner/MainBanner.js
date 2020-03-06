@@ -14,11 +14,11 @@ function MainBanner({ children }) {
   return <Flex flexDirection={["column", "row-reverse"]} my={[48, 0]} alignItems="center">
       <Box width={[1, 1 / 2]} alignSelf={["flex-start", "center"]} justifyContent={["flex-start", "center"]} px={30}>
         <Flex justifyContent="center" flexDirection="column">
-          <Heading size={1} color="light" my={0} fontSize={6}>
+          <Heading size={1} color="light" my={0} fontSize={[5, 6]} textAlign={["center", "left"]}>
             MagnoliaJS Conference
           </Heading>
-          <Text color="highlight" my={30}>
-            Jackson, Mississippi | April 15-16, 2020
+          <Text color="highlight" my={30} textAlign={["center", "left"]}>
+            Jackson, Mississippi<br />April 15-16, 2020
           </Text>
 
           {children}

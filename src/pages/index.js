@@ -24,7 +24,15 @@ const Root = () => (
   <ThemeProvider theme={theme}>
     <Layout>
       <MainBanner>
-        <Flex flexDirection="row" alignItems="center">
+        <Flex flexDirection={["column", "row"]} alignItems="center">
+          <ButtonLink href="https://ti.to/magnoliajs/magnoliajs-2020"	
+            alignSelf={["center", "flex-start"]}
+            mr={[0, 40]}
+            mb={[20, 0]}
+            target="_blank"	
+          >	
+            Get your ticket!
+          </ButtonLink>
           <GatsbyLink to="speakers" color="white">
             See speakers
           </GatsbyLink>
@@ -32,7 +40,7 @@ const Root = () => (
       </MainBanner>
       <Alternate pb={100}>
         <Heading color="mainBackground" size={2} textAlign="center">
-          Main Stage Speakers
+          Speakers
         </Heading>
         <Flex
           flexDirection="row"
@@ -52,18 +60,18 @@ const Root = () => (
             bio="Reactive programming nut and compiler enthusiast. Previously a Senior Software Engineer at Netflix. Lover of all things open source, his contributions span numerous ecosystems and active in the community as a Google Developer Expert for Web Technologies and W3C WebAssembly Community Group member. He previously volunteered as an RxJS core team member, and is the author of core-decorators, git-blame-someone-else, and co-author of redux-observable."
           />
         </Flex>
-        <Text pt={10} pb={30} textAlign="center">
+        <Text pt={10} pb={30} mx={-32}  textAlign="center">
           <Link href="/speakers">See all speakers</Link>
         </Text>
       </Alternate>
-      <Alternate pb={100}>
+      <Alternate pb={100} style={{overflowX: 'scroll'}}>
         <Heading color="mainBackground" size={2}>
-          Schedule - April 17 (Workshop Day)
+          Schedule - April 15 (Workshop Day)
         </Heading>
         <Text pt={10} pb={30}>Workshops run concurrently and their durations/end times will be determined by the instructors.</Text>
         <Schedule day="workshop" />
         <Heading color="alternateHeading" size={2}>
-          Schedule - April 18 (Conference Day)
+          Schedule - April 16 (Conference Day)
         </Heading>
         <Schedule day="conference" />
       </Alternate>
@@ -80,7 +88,7 @@ const Root = () => (
             Mississippi.
           </Text>
           <Text pt={10} pb={30}>
-            We are aiming to bring together around 200 web developers and
+            We are aiming to bring together around 250 web developers and
             friends to learn new skills and concepts and to network and develop
             new relationships.
           </Text>
