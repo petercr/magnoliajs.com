@@ -11,8 +11,6 @@ import Heading from "../components/Heading";
 import Schedule from '../components/Schedule';
 import Speaker from "../components/Speaker";
 import Text from "../components/Text";
-import KenWheelerImage from "../components/Images/ken-wheeler-image";
-import LaurieVossImage from "../components/Images/laurie-voss-image";
 import JayPhelpsImage from "../components/Images/jay-phelps-image";
 import { Link } from "../components/Button";
 import styled from "styled-components";
@@ -43,29 +41,6 @@ const Root = () => (
           justifyContent="center"
           style={{ padding: "2rem", width: "" }}
         >
-          <Speaker
-            name="Laurie Voss"
-            Image={LaurieVossImage}
-            talk={{
-              title: "JavaScript: who, what, where, why and next",
-              description: "npm has more data than anyone about who JavaScript developers are and what we’re up to. Using our unparalleled access to registry usage stats and the results of our 2019 ecosystem survey of over 33,000 developers, I break down the current state of JavaScript and where trends look like they’re headed, so you can make more informed technical choices."
-            }}
-            twitter="seldo"
-            company="npm"
-            bio="I’ve been a web developer for 23 years and I’m currently the co-founder and Chief Data Officer of npm, Inc.. I care deeply about making the web bigger, better and accessible to everyone."
-          />
-          <Speaker
-            name="Ken Wheeler"
-            Image={KenWheelerImage}
-            talk={{
-              title: "Renderless Components with Hooks",
-              description: "This talk will explore using a renderless component pattern with React hooks to provide declarative interfaces to imperative and non-DOM based libraries/APIs."
-            }}
-            twitter="ken_wheeler"
-            company="******"
-            bio="Ken needs no introduction."
-            />
-
           <Speaker
             name="Jay Phelps"
             Image={JayPhelpsImage}

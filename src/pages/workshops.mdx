@@ -4,10 +4,6 @@ import Card from "../components/Card";
 import { Flex } from "@rebass/grid";
 import Speaker from "../components/Workshops/Speaker.js";
 import WorkshopModal from "../components/Workshops/WorkshopModal.js";
-import SiaKaramalegos from "../components/Images/sia-karamalegos-image.js";
-import NateClark from "../components/Images/nate-clark-image.js";
-import JjAshgar from "../components/Images/jj-ashgar-image.js";
-import BryanRobinson from "../components/Images/bryan-robinson-image.js";
 
 <Flex
   flexDirection="row"
@@ -16,28 +12,5 @@ import BryanRobinson from "../components/Images/bryan-robinson-image.js";
   justifyContent="center"
   style={{ padding: "2rem", width: "" }}
 >
-  <Speaker
-    name="Sia Karamalegos"
-    Image={SiaKaramalegos}
-    talk={{
-      title: "Get in the Fast Lane: Measuring Frontend Performance",
-      description:
-        "Are you losing revenue to performance? 53% of mobile site visits are abandoned if a page takes longer than 3 seconds to load. Pinterest reduced load times by 40% and saw a 15% increase in sign ups. Starbucks implemented a 2x faster time to interactive resulting in a 65% increase in rewards registrations. AliExpress reduced load by 36% and saw a 10.5% increase in orders."
-    }}
-    twitter="thegreengeek"
-    company="Clio + Calliope"
-    talkPage="/workshops/frontend-performance"
-  />
-  <Speaker
-    name="Nate Clark"
-    Image={NateClark}
-    talk={{
-      title: "Zero Dependency Components: Introduction to Web Components",
-      description:
-        "Come learn about Web Components with friends! Web Components are native browser APIs that let you develop rich UI components with 0KB of added bundle size! In this workshop I want to convince you that you might not need a framework. We will walk through Web Component implementations of the sample components from reactjs.org:"
-    }}
-    twitter="natec4251"
-    company="Basecamp Coding Academy"
-    talkPage="/workshops/web-components"
-  />
+  
 </Flex>
