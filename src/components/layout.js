@@ -64,9 +64,6 @@ const Layout = ({ children, hideHeading = false }) => (
             <Footer>
             <Nav>
               <NavItem>
-                <Link to="vision">👀 Vision</Link>
-              </NavItem>
-              <NavItem>
                 <Link to="codeofconduct">📝 Code of Conduct</Link>
               </NavItem>
             </Nav>
