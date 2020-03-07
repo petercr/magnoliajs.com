@@ -64,7 +64,7 @@ const Root = () => (
           <Link href="/speakers">See all speakers</Link>
         </Text>
       </Alternate>
-      <Alternate pb={100} style={{overflowX: 'scroll'}}>
+      {/* <Alternate pb={100} style={{overflowX: 'scroll'}}>
         <Heading color="mainBackground" size={2}>
           Schedule - April 15 (Workshop Day)
         </Heading>
@@ -74,7 +74,7 @@ const Root = () => (
           Schedule - April 16 (Conference Day)
         </Heading>
         <Schedule day="conference" />
-      </Alternate>
+      </Alternate> */}
       <Alternate pb={100}>
         <Heading color="alternateHeading" size={2}>
           Interested in sponsoring?
@@ -82,7 +82,7 @@ const Root = () => (
         <TextWrapper>
           <Text pt={10} pb={30}>
             MagnoliaJS is Mississippi's{" "}
-            <strong>first-ever developer conference</strong>. Our mission is to
+            <strong>only developer conference</strong>. Our mission is to
             foster growth and opportunities for developers in the Southeast and
             be the launching point for greater things for the tech in
             Mississippi.
@@ -95,7 +95,7 @@ const Root = () => (
           <Text pb={40}>
             Here's your chance to contribute to that mission! We're looking for
             the best companies to partner with us and help to make the
-            first-annual MagnoliaJS conference a success.
+            second-annual MagnoliaJS conference a success.
           </Text>
         </TextWrapper>
         <Link
