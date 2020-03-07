@@ -56,7 +56,7 @@ const Layout = ({ children, hideHeading = false }) => (
                   <Link to="info">💡 Helpful Info</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="thankyou">❤️ Sponsors & Thank You's</Link>
+                  <Link to="thankyou">❤️ Thank You's</Link>
                 </NavItem>
               </Nav>
             </Header>
