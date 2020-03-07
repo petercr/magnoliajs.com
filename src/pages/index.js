@@ -33,12 +33,12 @@ const Root = () => (
           >	
             Get your ticket!
           </ButtonLink>
-          <GatsbyLink to="speakers" color="white">
+          {/* <GatsbyLink to="speakers" color="white">
             See speakers
-          </GatsbyLink>
+          </GatsbyLink> */}
         </Flex>
       </MainBanner>
-      <Alternate pb={100}>
+      {/* <Alternate pb={100}>
         <Heading color="mainBackground" size={2} textAlign="center">
           Speakers
         </Heading>
@@ -63,7 +63,7 @@ const Root = () => (
         <Text pt={10} pb={30} mx={-32}  textAlign="center">
           <Link href="/speakers">See all speakers</Link>
         </Text>
-      </Alternate>
+      </Alternate> */}
       {/* <Alternate pb={100} style={{overflowX: 'scroll'}}>
         <Heading color="mainBackground" size={2}>
           Schedule - April 15 (Workshop Day)
