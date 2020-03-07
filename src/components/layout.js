@@ -39,19 +39,19 @@ const Layout = ({ children, hideHeading = false }) => (
     render={data => (
       <>
         <Helmet>
-          <title>MagnoliaJS Conference - April 17-18, 2019</title>
+          <title>MagnoliaJS Conference - April 15-16, 2020</title>
         </Helmet>
         <ThemeProvider theme={theme}>
           <>
             <GlobalStyle />
             <Header siteTitle={data.site.siteMetadata.title} Link={Link}>
               <Nav>
-                <NavItem>
+                {/* <NavItem>
                   <Link to="speakers">🗣️ Speakers</Link>
-                </NavItem>
-                <NavItem>
+                </NavItem> */}
+                {/* <NavItem>
                   <Link to="workshops">🛠️ Workshops</Link>
-                </NavItem>
+                </NavItem> */}
                 <NavItem>
                   <Link to="info">💡 Helpful Info</Link>
                 </NavItem>
