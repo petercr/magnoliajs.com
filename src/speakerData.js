@@ -52,7 +52,6 @@ export default [
       In this talk, we'll first briefly cover what RxJS is, then focus on the various patterns for testing your RxJS code, including using the TestScheduler and the syntax of ASCII marble diagrams.`
     },
     twitter: "_jayphelps",
-    company: "None"
   },
   {
     name: "Michael Liendo",
@@ -79,7 +78,6 @@ export default [
         "React may be a JavaScript library, but that doesn’t mean we can’t or shouldn’t use progressive enhancement. Kayla will discuss what progressive enhancement is and how to use it to make your React applications more inclusive, accessible, and maintainable."
     },
     twitter: "_KaylaSween",
-    company: "none"
   },
   {
     name: "Tyler Clark",
@@ -116,7 +114,6 @@ export default [
       My talk will cover what vision accessibility is, different categories of low vision, what the needs of the users are, and what we as developers can do to achieve a great user experience for low vision users.`
     },
     twitter: "saltnburnem",
-    company: "none"
   },
   {
     name: "Nader Dabit",
