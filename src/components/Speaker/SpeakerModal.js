@@ -2,7 +2,15 @@ import React from "react";
 import { Flex } from "@rebass/grid";
 import { Box, Card, Button } from "rebass";
 
-const SpeakerModal = ({ name, talk, setOpen, twitter, Image, company, bio }) => (
+const SpeakerModal = ({
+  name,
+  talk,
+  setOpen,
+  twitter,
+  Image,
+  company,
+  bio
+}) => (
   <Box m="auto" width={[1, 0.9, 0.8]}>
     <Card
       borderRadius={12}
@@ -15,11 +23,12 @@ const SpeakerModal = ({ name, talk, setOpen, twitter, Image, company, bio }) => 
           borderRadius: "100%",
           overflow: "hidden",
           width: "125px",
+          height: "125px",
           margin: "10px auto",
           boxShadow: "0px 3px 15px rgba(0,0,0,0.2)"
         }}
       >
-        <Image />
+        <img src={Image} />
       </div>
       <h1 style={{ textAlign: "center" }}>{name}</h1>
       <Flex
@@ -41,12 +50,12 @@ const SpeakerModal = ({ name, talk, setOpen, twitter, Image, company, bio }) => 
       <h4 style={{ fontSize: ".9rem" }}>Company: {company}</h4>
       <h3 style={{ fontSize: "1rem" }}>{talk.title}</h3>
       <p style={{ fontSize: "1rem" }}>{talk.description}</p>
-      {bio && 
+      {bio && (
         <>
-          <h4 style={{ fontSize: ".9rem"}}>Bio</h4>
+          <h4 style={{ fontSize: ".9rem" }}>Bio</h4>
           <p style={{ fontSize: "1rem" }}>{bio}</p>
         </>
-      }
+      )}
       <Flex
         flexDirection="row"
         alignItems="center"

@@ -8,10 +8,10 @@ import { Link as ButtonLink } from "../components/Button";
 import { GatsbyLink } from "../components/Link";
 import { Flex } from "@rebass/grid";
 import Heading from "../components/Heading";
-import Schedule from '../components/Schedule';
+import Schedule from "../components/Schedule";
 import Speaker from "../components/Speaker";
 import Text from "../components/Text";
-import JayPhelpsImage from "../components/Images/jay-phelps-image";
+import speakerData from "../speakerData";
 import { Link } from "../components/Button";
 import styled from "styled-components";
 import "../components/root.css";
@@ -25,12 +25,13 @@ const Root = () => (
     <Layout>
       <MainBanner>
         <Flex flexDirection={["column", "row"]} alignItems="center">
-          <ButtonLink href="https://ti.to/magnoliajs/magnoliajs-2020"	
+          <ButtonLink
+            href="https://ti.to/magnoliajs/magnoliajs-2020"
             alignSelf={["center", "flex-start"]}
             mr={[0, 40]}
             mb={[20, 0]}
-            target="_blank"	
-          >	
+            target="_blank"
+          >
             Get your ticket!
           </ButtonLink>
           {/* <GatsbyLink to="speakers" color="white">
@@ -38,6 +39,34 @@ const Root = () => (
           </GatsbyLink> */}
         </Flex>
       </MainBanner>
+      <article
+        style={{
+          padding: "2rem",
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
+        {speakerData.slice(0, 3).map(speaker => {
+          console.log(speaker);
+
+          return (
+            <Speaker
+              name={speaker.name}
+              Image={speaker.Image}
+              talk={{
+                title: speaker.talk.title,
+                description: speaker.talk.description
+              }}
+              twitter={speaker.twitter}
+              company={speaker.company}
+              bio={speaker.bio}
+            />
+          );
+        })}
+      </article>
       {/* <Alternate pb={100}>
         <Heading color="mainBackground" size={2} textAlign="center">
           Speakers
@@ -82,10 +111,9 @@ const Root = () => (
         <TextWrapper>
           <Text pt={10} pb={30}>
             MagnoliaJS is Mississippi's{" "}
-            <strong>only developer conference</strong>. Our mission is to
-            foster growth and opportunities for developers in the Southeast and
-            be the launching point for greater things for the tech in
-            Mississippi.
+            <strong>only developer conference</strong>. Our mission is to foster
+            growth and opportunities for developers in the Southeast and be the
+            launching point for greater things for the tech in Mississippi.
           </Text>
           <Text pt={10} pb={30}>
             We are aiming to bring together around 250 web developers and
