@@ -26,7 +26,7 @@ const Root = () => (
       <MainBanner>
         <Flex flexDirection={["column", "row"]} alignItems="center">
           <ButtonLink
-            href="https://ti.to/magnoliajs/magnoliajs-2020"
+            href="https://ti.to/magnoliajs/magnoliajs2020"
             alignSelf={["center", "flex-start"]}
             mr={[0, 40]}
             mb={[20, 0]}
