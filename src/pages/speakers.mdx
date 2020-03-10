@@ -1,0 +1,30 @@
+import { Link } from "gatsby";
+import Layout from "../components/layout";
+import Card from "../components/Card";
+import { Flex } from "@rebass/grid";
+import Speaker from "../components/Speaker";
+import speakerData from "../speakerData.js";
+
+<Flex
+  flexDirection="row"
+  flexWrap="wrap"
+  alignItems="center"
+  justifyContent="center"
+  style={{ padding: "2rem", width: "" }}
+>
+  {speakerData.map(speaker => (
+    <Speaker
+    name={speaker.name}
+    Image={speaker.Image}
+    talk={{
+      title: speaker.talk.title,
+       description: speaker.talk.description
+    }}
+    twitter={speaker.twitter}
+    company={speaker.company}
+    bio={speaker.bio}
+  />
+  ))}
+  
+  
+</Flex>;

@@ -34,9 +34,9 @@ const Root = () => (
           >
             Get your ticket!
           </ButtonLink>
-          {/* <GatsbyLink to="speakers" color="white">
+          <GatsbyLink to="speakers" color="white">
             See speakers
-          </GatsbyLink> */}
+          </GatsbyLink>
         </Flex>
       </MainBanner>
       <article
@@ -50,8 +50,6 @@ const Root = () => (
         }}
       >
         {speakerData.slice(0, 3).map(speaker => {
-          console.log(speaker);
-
           return (
             <Speaker
               name={speaker.name}
@@ -67,6 +65,9 @@ const Root = () => (
           );
         })}
       </article>
+      <Text pt={10} pb={30} mx={-32} textAlign="center">
+        <Link href="/speakers">See all speakers</Link>
+      </Text>
       {/* <Alternate pb={100}>
         <Heading color="mainBackground" size={2} textAlign="center">
           Speakers
@@ -89,9 +90,7 @@ const Root = () => (
             bio="Reactive programming nut and compiler enthusiast. Previously a Senior Software Engineer at Netflix. Lover of all things open source, his contributions span numerous ecosystems and active in the community as a Google Developer Expert for Web Technologies and W3C WebAssembly Community Group member. He previously volunteered as an RxJS core team member, and is the author of core-decorators, git-blame-someone-else, and co-author of redux-observable."
           />
         </Flex>
-        <Text pt={10} pb={30} mx={-32}  textAlign="center">
-          <Link href="/speakers">See all speakers</Link>
-        </Text>
+        
       </Alternate> */}
       {/* <Alternate pb={100} style={{overflowX: 'scroll'}}>
         <Heading color="mainBackground" size={2}>
