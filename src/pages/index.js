@@ -8,12 +8,10 @@ import { Link as ButtonLink } from "../components/Button";
 import { GatsbyLink } from "../components/Link";
 import { Flex } from "@rebass/grid";
 import Heading from "../components/Heading";
-import Schedule from '../components/Schedule';
+import Schedule from "../components/Schedule";
 import Speaker from "../components/Speaker";
 import Text from "../components/Text";
-import KenWheelerImage from "../components/Images/ken-wheeler-image";
-import LaurieVossImage from "../components/Images/laurie-voss-image";
-import JayPhelpsImage from "../components/Images/jay-phelps-image";
+import speakerData from "../speakerData";
 import { Link } from "../components/Button";
 import styled from "styled-components";
 import "../components/root.css";
@@ -26,15 +24,53 @@ const Root = () => (
   <ThemeProvider theme={theme}>
     <Layout>
       <MainBanner>
-        <Flex flexDirection="row" alignItems="center">
+        <Flex flexDirection={["column", "row"]} alignItems="center">
+          <ButtonLink
+            href="https://ti.to/magnoliajs/magnoliajs-2020"
+            alignSelf={["center", "flex-start"]}
+            mr={[0, 40]}
+            mb={[20, 0]}
+            target="_blank"
+          >
+            Get your ticket!
+          </ButtonLink>
           <GatsbyLink to="speakers" color="white">
             See speakers
           </GatsbyLink>
         </Flex>
       </MainBanner>
-      <Alternate pb={100}>
+      <article
+        style={{
+          padding: "2rem",
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          alignItems: "center",
+          justifyContent: "center"
+        }}
+      >
+        {speakerData.slice(0, 3).map(speaker => {
+          return (
+            <Speaker
+              name={speaker.name}
+              Image={speaker.Image}
+              talk={{
+                title: speaker.talk.title,
+                description: speaker.talk.description
+              }}
+              twitter={speaker.twitter}
+              company={speaker.company}
+              bio={speaker.bio}
+            />
+          );
+        })}
+      </article>
+      <Text pt={10} pb={30} mx={-32} textAlign="center">
+        <Link href="/speakers">See all speakers</Link>
+      </Text>
+      {/* <Alternate pb={100}>
         <Heading color="mainBackground" size={2} textAlign="center">
-          Main Stage Speakers
+          Speakers
         </Heading>
         <Flex
           flexDirection="row"
@@ -43,29 +79,6 @@ const Root = () => (
           justifyContent="center"
           style={{ padding: "2rem", width: "" }}
         >
-          <Speaker
-            name="Laurie Voss"
-            Image={LaurieVossImage}
-            talk={{
-              title: "JavaScript: who, what, where, why and next",
-              description: "npm has more data than anyone about who JavaScript developers are and what we’re up to. Using our unparalleled access to registry usage stats and the results of our 2019 ecosystem survey of over 33,000 developers, I break down the current state of JavaScript and where trends look like they’re headed, so you can make more informed technical choices."
-            }}
-            twitter="seldo"
-            company="npm"
-            bio="I’ve been a web developer for 23 years and I’m currently the co-founder and Chief Data Officer of npm, Inc.. I care deeply about making the web bigger, better and accessible to everyone."
-          />
-          <Speaker
-            name="Ken Wheeler"
-            Image={KenWheelerImage}
-            talk={{
-              title: "Renderless Components with Hooks",
-              description: "This talk will explore using a renderless component pattern with React hooks to provide declarative interfaces to imperative and non-DOM based libraries/APIs."
-            }}
-            twitter="ken_wheeler"
-            company="******"
-            bio="Ken needs no introduction."
-            />
-
           <Speaker
             name="Jay Phelps"
             Image={JayPhelpsImage}
@@ -77,21 +90,19 @@ const Root = () => (
             bio="Reactive programming nut and compiler enthusiast. Previously a Senior Software Engineer at Netflix. Lover of all things open source, his contributions span numerous ecosystems and active in the community as a Google Developer Expert for Web Technologies and W3C WebAssembly Community Group member. He previously volunteered as an RxJS core team member, and is the author of core-decorators, git-blame-someone-else, and co-author of redux-observable."
           />
         </Flex>
-        <Text pt={10} pb={30} textAlign="center">
-          <Link href="/speakers">See all speakers</Link>
-        </Text>
-      </Alternate>
-      <Alternate pb={100}>
+        
+      </Alternate> */}
+      {/* <Alternate pb={100} style={{overflowX: 'scroll'}}>
         <Heading color="mainBackground" size={2}>
-          Schedule - April 17 (Workshop Day)
+          Schedule - April 15 (Workshop Day)
         </Heading>
         <Text pt={10} pb={30}>Workshops run concurrently and their durations/end times will be determined by the instructors.</Text>
         <Schedule day="workshop" />
         <Heading color="alternateHeading" size={2}>
-          Schedule - April 18 (Conference Day)
+          Schedule - April 16 (Conference Day)
         </Heading>
         <Schedule day="conference" />
-      </Alternate>
+      </Alternate> */}
       <Alternate pb={100}>
         <Heading color="alternateHeading" size={2}>
           Interested in sponsoring?
@@ -99,20 +110,19 @@ const Root = () => (
         <TextWrapper>
           <Text pt={10} pb={30}>
             MagnoliaJS is Mississippi's{" "}
-            <strong>first-ever developer conference</strong>. Our mission is to
-            foster growth and opportunities for developers in the Southeast and
-            be the launching point for greater things for the tech in
-            Mississippi.
+            <strong>only developer conference</strong>. Our mission is to foster
+            growth and opportunities for developers in the Southeast and be the
+            launching point for greater things for the tech in Mississippi.
           </Text>
           <Text pt={10} pb={30}>
-            We are aiming to bring together around 200 web developers and
+            We are aiming to bring together around 250 web developers and
             friends to learn new skills and concepts and to network and develop
             new relationships.
           </Text>
           <Text pb={40}>
             Here's your chance to contribute to that mission! We're looking for
             the best companies to partner with us and help to make the
-            first-annual MagnoliaJS conference a success.
+            second-annual MagnoliaJS conference a success.
           </Text>
         </TextWrapper>
         <Link
