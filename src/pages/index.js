@@ -65,7 +65,7 @@ const Root = () => (
           );
         })}
       </article>
-      <Text pt={10} pb={30} mx={-32} textAlign="center">
+      <Text pt={10} pb={30} textAlign="center">
         <Link href="/speakers">See all speakers</Link>
       </Text>
       {/* <Alternate pb={100}>
