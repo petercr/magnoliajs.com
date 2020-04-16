@@ -39,29 +39,36 @@ const Layout = ({ children, hideHeading = false }) => (
     render={data => (
       <>
         <Helmet>
-          <title>MagnoliaJS Conference - April 17-18, 2019</title>
+          <title>MagnoliaJS Conference - April 15-16, 2020</title>
         </Helmet>
         <ThemeProvider theme={theme}>
           <>
             <GlobalStyle />
             <Header siteTitle={data.site.siteMetadata.title} Link={Link}>
               <Nav>
-                <NavItem>
+                {/* <NavItem>
                   <Link to="speakers">🗣️ Speakers</Link>
+                </NavItem> */}
+                {/* <NavItem>
+                  <Link to="workshops">🛠️ Workshops</Link>
+                </NavItem> */}
+                <NavItem>
+                  <Link to="info">💡 Helpful Info</Link>
                 </NavItem>
                 <NavItem>
-                  <Link to="sponsor">❤️ Sponsor</Link>
-                </NavItem>
-                <NavItem>
-                  <Link to="vision">👀 Vision</Link>
-                </NavItem>
-                <NavItem>
-                  <Link to="codeofconduct">📝 Code of Conduct</Link>
+                  <Link to="thankyou">❤️ Thank You's</Link>
                 </NavItem>
               </Nav>
             </Header>
             <Main>{children}</Main>
-            <Footer>&copy; 2019 Magnolia Events LLC</Footer>
+            <Footer>
+            <Nav>
+              <NavItem>
+                <Link to="codeofconduct">📝 Code of Conduct</Link>
+              </NavItem>
+            </Nav>
+              &copy; 2019 Magnolia Events LLC
+            </Footer>
           </>
         </ThemeProvider>
       </>

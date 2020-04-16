@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Flex } from "@rebass/grid";
 import { Button } from "rebass";
 import Modal from "react-modal";
-import SpeakerModal from "./SpeakerModal";
+import WorkshopModal from "./WorkshopModal";
 
 const truncate = content =>
   content
@@ -10,7 +10,7 @@ const truncate = content =>
     .slice(0, 25)
     .join(" ") + "...";
 
-function Speaker({ Image, name, talk, twitter, company, bio }) {
+function Speaker({ Image, name, talk, twitter, company, talkPage }) {
   const [isOpen, setOpen] = useState(false);
 
   return (
@@ -42,14 +42,14 @@ function Speaker({ Image, name, talk, twitter, company, bio }) {
         }}
         ariaHideApp={false}
       >
-        <SpeakerModal
+        <WorkshopModal
           name={name}
           talk={talk}
           setOpen={setOpen}
           twitter={twitter}
           Image={Image}
           company={company}
-          bio={bio}
+          talkPage={talkPage}
         />
       </Modal>
 
@@ -60,18 +60,17 @@ function Speaker({ Image, name, talk, twitter, company, bio }) {
         style={{ padding: "0.5rem", flexWrap: "wrap" }}
       >
         <div style={{ margin: "0.5rem", flex: 2 }}>
-          <div style={{ width: "100%" }}>
+          <div style={{ width: "100%", textAlign: "center" }}>
             <div
               style={{
                 borderRadius: "100%",
                 overflow: "hidden",
                 width: "125px",
-                height: "125px",
                 margin: "10px auto",
                 boxShadow: "0px 3px 15px rgba(0,0,0,0.2)"
               }}
             >
-              <img src={Image} />
+              <Image />
             </div>
 
             <h3 style={{ textAlign: "center" }}>{name}</h3>
@@ -89,7 +88,7 @@ function Speaker({ Image, name, talk, twitter, company, bio }) {
         <div style={{ width: "250px", margin: "0.5rem" }}>
           <h3 style={{ fontSize: "1rem" }}>{talk.title}</h3>
 
-          {company && <h4 style={{ fontSize: ".9rem" }}>Company: {company}</h4>}
+          <h4 style={{ fontSize: ".9rem" }}>Company: {company}</h4>
           <p style={{ fontSize: "1rem", height: "200px" }}>
             {truncate(talk.description)}
           </p>

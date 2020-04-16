@@ -1,15 +1,16 @@
 import React from "react";
+import { Link } from "gatsby";
 import { Flex } from "@rebass/grid";
 import { Box, Card, Button } from "rebass";
 
-const SpeakerModal = ({
+const WorkshopModal = ({
   name,
   talk,
   setOpen,
   twitter,
   Image,
   company,
-  bio
+  talkPage
 }) => (
   <Box m="auto" width={[1, 0.9, 0.8]}>
     <Card
@@ -23,12 +24,11 @@ const SpeakerModal = ({
           borderRadius: "100%",
           overflow: "hidden",
           width: "125px",
-          height: "125px",
           margin: "10px auto",
           boxShadow: "0px 3px 15px rgba(0,0,0,0.2)"
         }}
       >
-        <img src={Image} />
+        <Image />
       </div>
       <h1 style={{ textAlign: "center" }}>{name}</h1>
       <Flex
@@ -46,22 +46,16 @@ const SpeakerModal = ({
           Twitter
         </a>
       </Flex>
-
       <h4 style={{ fontSize: ".9rem" }}>Company: {company}</h4>
       <h3 style={{ fontSize: "1rem" }}>{talk.title}</h3>
       <p style={{ fontSize: "1rem" }}>{talk.description}</p>
-      {bio && (
-        <>
-          <h4 style={{ fontSize: ".9rem" }}>Bio</h4>
-          <p style={{ fontSize: "1rem" }}>{bio}</p>
-        </>
-      )}
       <Flex
         flexDirection="row"
         alignItems="center"
-        justifyContent="center"
+        justifyContent="space-around"
         style={{ padding: "0.5rem", flexWrap: "wrap" }}
       >
+        <Link to={talkPage}>Visit Talk Page</Link>
         <Button
           style={{ background: "#BF5272" }}
           onClick={e => {
@@ -76,4 +70,4 @@ const SpeakerModal = ({
   </Box>
 );
 
-export default SpeakerModal;
+export default WorkshopModal;
